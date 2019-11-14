@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title%}{{post.title}}{% endblock %}
+
+{% block header %}
+    <h1>{{post.title}}</h1>
+{% endblock %}
+{% block content%}
+    <h3>{{post.title}}</h3>
+
+    <p class="date">
+        Publishe {{post.publish}} by {{ post.author}}
+    </p>
+    {{post.body|linebreaks}}
+    <a href="{% url 'blog:post_share' post.id %}">share</a>
+
+    
+
+
+    {% with comments.count as total_comments %}
+        <h3>
+            {{total_comments}} comment{{total_comments|pluralize}}
+        </h3>
+    {% endwith %}
+    {% for comment in comments %}
+        <div class="comments">
+            <pre>{{comment.name}} {{comment.created}}
+            {{comment.body | linebreaks}}</pre>
+        </div>
+    {% endfor %}
+    {% if new_comment %}
+    <h3>your comment has been added</h3>
+    {% else %}
+        <!-- comment form -->
+        <hr>
+        <h3>Add Comment</h3>
+        <form action="{{post.get_absolute_url}}" method="POST">
+            {% csrf_token %}
+            {{comment_form.as_p}}
+           <p> <input type="submit" value="Add"></p>
+        </form>
+    {% endif %}
+{% endblock %}
+{% block recomended %}
+<h3>Recommended POsts</h3>
+{% for post in similar_posts %}
+<p>
+    <a href="{{post.get_absolute_url}}">{{post.title}}</a>
+</p>
+
+{% empty %}
+<p>
+    no recommendations of similar post
+</p>
+
+{% endfor %}
+{% endblock %}
+{% block script %}
+{% endblock %}

@@ -1,0 +1,230 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+
+body {
+   margin: 0;
+   background-color: #dfddc7;
+}
+.header {
+    background-color: #e3b04b;
+    color: #2b2b28;
+    /* min-height: 200px; */
+    padding: 20px;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: #2f416d;
+}
+
+ul, li {
+    list-style-type: none;
+}
+.header h1{
+    width: 50%;
+    margin: 0px auto;
+    color: #e3b04b;
+    background-color: #2b2b28;
+}
+nav {
+    display: inline-block;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    background:#2b2b28;
+    color: #e3b04b;
+}
+nav a, nav a:link {
+    text-decoration: none;
+    padding: 20px;
+    font-size: 1.5rem;
+    margin-left: 10px;
+    color: #e3b04b;
+}
+nav a:hover{
+    background: #e3b04b;
+    color: #2b2b28;
+}
+nav:last-child{
+   float: right;
+}
+#search{
+    float: right;
+    position: relative;
+}
+#searchform{
+    display: none;
+    position: absolute;
+    right: 0px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0 , 0,.2);
+    padding: 12px 16px;
+    z-index: 1;
+
+}
+#search button{
+    padding: 8px;
+    border: none;
+    border-bottom: rgb(78, 82, 70) solid 2px;
+    border-radius: 5px;
+    background-color: #2b2b28;
+    color: #e3b04b;
+    font-size: 1rem;
+    /* display: block;
+    width: 200px; */
+}
+#search:hover #searchform{
+    display: block;
+    
+   
+}
+header {
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+     background-color: #443737;
+    color: #e3b04b;
+    min-height: 100px;
+}
+header h1{
+    margin: auto;
+    padding: 10px;
+    background-color: #2b2b28; 
+}
+h1,h2 {
+  border-bottom: 2px solid rgba(83, 99, 89, 0.384);
+  border-right: 2px solid rgba(83, 99, 89, 0.384);
+  width: 50%;
+  /* text-align: center; */
+  box-shadow: 4px 4px 5px #555;
+}
+
+.container {
+    padding: 20px;
+    min-height: 550px;
+    /* margin: 40px; */
+    overflow: auto;
+}
+
+.content {
+    /* background-color: rgba(65, 65, 65,.5); */
+    float: left;
+    padding: 30px;
+    width: 60%;
+    min-width: 480px;
+}
+
+.sidebar {
+    float: right;
+    /* background-color: #c9d1d3; */
+    padding: 30px;
+    color: #2b2b28;
+    width: 35%;
+
+}
+
+.comments {
+    margin: 4px;
+    width: 400px;
+    background-color: rgba(95, 128, 133, 0.151);
+    padding: 6px;
+    overflow: auto;
+        
+
+}
+
+
+.cont-sec{
+    clear: both;
+    background-color: #2b2b28;
+    padding: 30px;
+    padding-bottom: 0px;
+}
+.contact-div{
+    width: 650px;
+    margin-left: 30px;
+    color: #e3b04b;
+    margin: auto;
+}
+.contact-form{
+    padding: 10px;
+}
+.contact-form input,textarea{
+    width: 30%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    border-bottom: olivedrab solid 2px;
+    border-radius: 5px;
+    background: rgba(16, 145, 165, 0.13);
+    box-shadow: 2px 2px 2px #2b2b28;
+    color: #e3b04b;
+    /* font-size: 1rem; */
+
+}
+.contact-form textarea{
+    width: 45%;
+}
+.contact-form input:focus,textarea:focus{
+    font-size: 1rem;
+}
+.contact-form input::placeholder,textarea::placeholder{
+    color: #e3b04b;
+    /* font-size: 1rem; */
+    text-align: center;
+
+}
+
+.contact-form input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{
+    color: #e3b04b;
+    /* font-size: 1rem; */
+    text-align: center;
+
+}
+
+.contact-form input::-ms-input-placeholder,textarea::-ms-input-placeholder{
+    color: #e3b04b;
+    /* font-size: 1rem; */
+    text-align: center;
+
+}
+
+.contact-form button{
+    position: relative;
+    bottom: 32px;
+    padding: 8px;
+    width: 45%;
+    border: none;
+    border-bottom: rgb(78, 82, 70) solid 2px;
+    border-radius: 5px;
+    background-color: #2b2b28;
+    color: #e3b04b;
+    font-size: 1rem;
+    
+}
+.contact-form button:hover{
+    cursor: pointer;
+    background: rgba(16, 145, 165, 0.13);
+}
+.footer {
+    background-color: #e3b04b;
+    color: #2b2b28;
+    min-height: 200px;
+    padding: 20px;
+}
+
+.footer h1{
+    width: 80%;
+    margin: 0px auto;
+    color: #e3b04b;
+    background-color: #2b2b28;
+    text-align: center;
+
+}
